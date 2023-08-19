@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="block container">
+    <div class="block_title">
+        <div class="block_heading">
+            <b>Son xəbərlər</b>
+        </div>
+    </div>
+    <div class=" block_content cols ">
+        {% for story in each %}
+        <div class="col col_1">
+            <div class="col_content">
+                <div class="news_1_desc">
+                    <b> {{ story.title }} </b>
+                    <p class="nonane"></p>
+                    <div class="new_foot">
+                        <a href="" class="arr_bttn"> {{ story.link }} </a>
+                        <p class="time"> {{ story.data }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="news_link">
+            <a href="" class="arr_bttn">Bütün xəbərlər</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,45 @@
+.content.inner_page{
+    padding: 150px 0 0 0;
+}
+
+.common_page_title{
+    text-align: center;
+    margin: 0 auto 50px auto;
+    max-width: 1100px;
+    position: relative;
+}
+
+.common_page_title h1{
+    font-family: 'TT Firs Neue Trl', sans-serif;
+    font-size: 54px;
+}
+
+.main_wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.new_list_totla{
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.new_list_totla li{
+    width: 33.333%;
+    margin: 0px;
+    padding: 0 15px 30px;
+    flex-grow: 1;
+    max-width: 33.3333%;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+.new_list_totla .news_1_desc {
+    border: 1px solid #ECECEC;
+    border-radius: 10px;
+}

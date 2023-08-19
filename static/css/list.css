@@ -1,0 +1,70 @@
+body{
+    font-family: 'TT Firs Neue Trl', sans-serif;
+}
+
+#allinone{
+    display: flex;
+    justify-content: space-evenly;
+    display: none;
+}
+#allinone_2{
+    display: flex;
+    display: none;
+}
+
+
+.loans_ul{
+    list-style: none;
+}
+
+
+
+.loans_title{
+    color: black;
+    text-decoration: none;
+    font-size: 27px;
+}
+
+.cards_title{
+    color: black;
+    text-decoration: none;
+    font-size: 27px;
+}
+
+.deposits_title{
+    color: black;
+    text-decoration: none;
+    font-size: 27px;
+}
+
+.loans_li{
+    color: grey;
+    text-decoration: none;
+}
+
+.card_ser_div{
+    padding-left: 137px;
+}
+
+.money_trans{
+    padding-left: 172px;
+}
+
+.online_ser{
+    padding-left: 50px;
+}
+
+.other_ul{
+    list-style: none;
+    padding-top: 55px;
+}
+
+.loans_cal{
+    list-style: none;
+    padding-top: 34px;
+}
+
+.loans_ul_co{
+    list-style: none;
+    padding-top: 41px;
+}

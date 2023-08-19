@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <div>
+        <img src="" alt="">
+    </div>
+
+    <div class="order_div">
+        <div>
+        <img src="{{ each_1['img'] }}" alt="" class="order_div_photo">
+        </div>
+        <div class="order_div_text">
+            <h1 class="order_h1"><b>{{ each_1['title_i'] }}</b></h1>
+            <div class="order_div_ul">
+                <ul class="order_ul">
+                    <li><h3 class="order_p"><img src="{{ url_for('static', filename='img/100.svg')}}" alt=""> {{ each_1['cashback_i'] }}</h3></li>
+                    <li><p class="order_p"><img src="{{ url_for('static', filename='img/101.svg')}}" alt=""> {{ each_1['delivery'] }} </p></li>
+                    <li><p class="order_p"><img src="{{ url_for('static', filename='img/102.svg')}}" alt=""> {{ each_1['price'] }}</p></li>
+                    <li><p class="order_p"><img src="{{ url_for('static', filename='img/103.svg')}}" alt=""> {{ each_1['cashback_categories'] }} </p></li>
+                    <li><p class="order_p"><img src="{{ url_for('static', filename='img/104.svg')}}" alt=""> {{ each_1['balance']}} </p></li>
+                    <li><p class="order_p"><img src="{{ url_for('static', filename='img/105.svg')}}" alt=""> {{ each_1['cashback_partners'] }}</p></li>
+                </ul>
+            </div>
+            <div class="button_order">
+                <button class="order_now_button">Order Now</button>
+                <button class="order_now_button2">Tarrifs   <i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="h_cashback">
+            <div class="title_cash">
+                <h1 style="font-family: 'TT Firs Neue Trl', sans-serif;">High cashback options</h1>
+                <p style="font-family: 'TT Firs Neue Trl', sans-serif;">Earn high cashback from 2 different categories for the selected card every month!</p>
+            </div>
+        </div>
+        
+        <div class="container  all_four_boxes">
+            <article class="cashback_boxes">
+                <div class="cashback_market">
+                    <img class="img_market" src="{{ url_for('static', filename='img/200.svg')}}" alt="">
+                    <span class="circle_market">{{ each_1['market_per'] }}</span>
+                </div>
+                <h3>Market</h3>
+                <p>{{ each_1['market'] }}</p>
+            </article>
+            <article class="cashback_boxes_2">
+                <div class="cashback_market">
+                    <img class="img_market" src="{{ url_for('static', filename='img/201.svg')}}" alt="">
+                    <span class="circle_market">{{ each_1['clothing_per'] }}</span>
+                </div>
+                <div class="h3_p">
+                    <h3>Clothing</h3>
+                    <p>{{ each_1['clothing'] }}</p>
+                </div>
+            </article>
+            <article class="cashback_boxes_3">
+                <div class="cashback_market">
+                    <img class="img_market" src="{{ url_for('static', filename='img/202.svg')}}" alt="">
+                    <span class="circle_market">{{ each_1['gas_per'] }}</span>
+                </div>
+                <h3>Gas</h3>
+                <p>{{ each_1['gas'] }}</p>
+            </article>
+            <article class="cashback_boxes_4">
+                <div class="cashback_market">
+                    <img class="img_market" src="{{ url_for('static', filename='img/203.svg')}}" alt="">
+                    <span class="circle_market">{{ each_1['cafes_per'] }}</span>
+                </div>
+                <h3>Cafes</h3>
+                <p>{{ each_1['cafes'] }}</p>
+            </article>
+        </div>
+        <div class="container additional_information">
+            <h2>Additional Information</h2>
+            <div class="info_cashback">
+                <h3>{{ each_1['additional_information_title'] }}</h3>
+                <p>{{ each_1['additional_information_subtitle'] }}</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="yelo_card_app">
+        <div class="yelo_card_txt">
+            <h2>{{ each_1['title'] }}</h2>
+            <div class="yelo_card_img">
+                <span><img src="{{ each_1['image'] }}" alt=""></span>
+            </div>
+        </div>
+        <div class="card_order">
+            <section>
+                <div class="order_from no_padding">
+                    <div class="from_self no_border">
+                        <form action="" method="post" name="caro">
+                            {{ form.csrf_token }}
+                            <input type="hidden" name="item" value="8220">
+                            <input type="hidden" name="uid" value="1685300817">
+                            <input type="hidden" name="action" value="cardorder">
+                            <div class="fs_inner card_form">
+                                <div class="two_input">
+                                    <div class="uni_input">
+                                        {{ form.card_type }}
+                                    </div>
+                                    <div class="uni_input">
+                                        {{ form.currency }}
+                                    </div>
+                                </div>
+                                <div class="two_input">
+                                    <div class="uni_input">
+                                        <label>
+                                            {{ form.name }}
+                                            <span>Name</span>
+                                        </label>
+                                    </div>
+                                    <div class="uni_input">
+                                        <label>
+                                            {{ form.surname }}
+                                            <span>Surname</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="two_input">
+                                    <div class="uni_input">
+                                        <label>
+                                            {{ form.mobile_number }}
+                                            <span>Mobile number</span>
+                                        </label>
+                                    </div>
+                                    <div class="uni_input">
+                                        <label>
+                                            {{ form.pin }}
+                                            <span>PIN</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="two_input">
+                                    <div class="uni_input">
+                                        <!-- <label>
+                                            <select name="payment-method" onchange="handleInputChange(this, 'paymentMethodLabel')">
+                                                <option value disabled="disabled" selected= "selected"></option>
+                                                <option id="price" value="prepayment">With the payment of the card price</option>
+                                                <option id="deposit" value="postpayment">With initial deposit</option>
+                                            </select>
+                                            <span id="paymentMethodLabel">Payment Method</span>
+                                        </label> -->
+                                        {{ form.payment_methods }}
+                                    </div>
+                                    <div class="uni_input">
+                                        <label>
+                                            {{ form.secret_word }}
+                                            <span>Secret Word</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div data-selector="payment_method" data-name="free" class="info_block gray hidden">
+                                    We offer a 3-year card for free upon deposit of AZN 300. After getting the card, it is possible to use the funds immediately 
+                                </div>
+                                <h3 class="devider_h3"><span>Delivery And Peyment</span></h3>
+                                <div class="uni_input">
+                                    <!-- <label>
+                                        <select onchange="handleInputChange(this, 'acquisitionMethodLabel')">
+                                            <option value disabled="disabled" selected="disabled"></option>
+                                            <option id="Delivery" value="delivery">Delivery - Free</option>
+                                            <option id="branch" value="branch">In bank branch</option>
+                                        </select>
+                                        <span id="acquisitionMethodLabel">Method of acquisition</span>
+                                    </label> -->
+                                    {{ form.method_ac }}
+                                </div>
+                                <div class="uni_input">
+                                    <!-- <label>
+                                        <select  onchange="handleCityChange(this)">
+                                            <option value disabled="disabled" selected="selected"></option> 
+                                            <option id="Baki" value="1">Baki</option>
+                                        </select> 
+                                        <span id="cityLabel">City</span>
+                                    </label> -->
+                                    {{ form.city }}
+                                </div>
+                                <div class="uni_input">
+                                    <label>
+                                        {{ form.adress }}
+                                        <span>Delivery address</span>
+                                    </label>
+                                </div>
+                                <h4 style="text-align: left;">How do you want to pay?</h4>
+                                <div class="uni_input">
+                                    <!-- <label>
+                                        <select>
+                                            <option value="" disabled="disabled" selected="selected"></option>
+                                            <option id="Via" value="terminal">Via terminal</option>
+                                        </select> 
+                                        <span>Payment type</span>
+                                    </label> -->
+                                    {{ form.payment_type }}
+                                </div>
+                                <div class="one_check">
+                                    <label>
+                                        <input type="checkbox" checked="checked"> 
+                                        <em></em> 
+                                        <span>“Davam et” basmaqla Asan finansdan fərdi məlumatların alınmasına razılıq verirəm</span>
+                                    </label>
+                                </div>
+                                <div class="fs_inner">
+                                    <button type="submit" class="yelo_bttn credit_buy"><b>Continue</b></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>      
+    </div>
+
+{% endblock %}
+

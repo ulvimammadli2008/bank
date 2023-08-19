@@ -1,0 +1,121 @@
+.cards_h1{
+    font-size: 54px;
+    text-align: center;
+    font-family: 'TT Firs Neue Trl', sans-serif;
+}
+.hide{
+    display: none;
+}
+
+.cards_p{
+    font-size: 20px;
+    color: gray;
+    text-align: center;
+    font-family: 'TT Firs Neue Trl', sans-serif;
+}
+
+.yelo_light_div{
+    display: flex;
+    justify-content: space-around;
+    background: url(../img/yelo_block.svg) no-repeat 117%;
+    background-size: contain;
+    border: 1px solid #D3D3D3;
+    border-radius: 15px;
+    padding: 55px;
+    margin-left: 195px;
+    margin-right: 195px;
+    margin-top: 50px;
+
+}
+
+.yelo_light_div_img {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_img {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.img_img:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.2);
+}
+
+.yelo_light_div_t{
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.yelo_light_all_in_one{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.yelo_light_h3{
+    color: black;
+    font-size: 34px;
+    font-family: 'TT Firs Neue Trl', sans-serif;
+}
+
+.yelo_light_p{
+    color:gray;
+    font-size: 18px;
+    font-weight: 100px !important;
+
+}
+.term_d{
+    font-size: 15px;
+    color: grey;
+}
+
+.b{
+    font-size: 21px;
+}
+
+.order{
+    transform: skew(-14deg, 0);
+    width: 225px;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;   
+}
+
+.order:hover{
+    background-color: #ffc42c;
+    color: black;
+    transition: all 0.2s;
+}
+
+.button_order{
+    padding-top: 35px;
+}
+
+.learn_more{
+    text-decoration: none;
+    color: grey;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+.learn_more:hover{
+    cursor: pointer;
+    color: black;
+    transition: all 0.2s;
+}
+
+.learn_more{
+    padding-top: 11px;
+}

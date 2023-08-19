@@ -1,0 +1,123 @@
+body{
+    font-family: 'TT Firs Neue Trl', sans-serif;
+}
+
+#navbartexts{
+    color: grey;
+}
+
+
+#navbartexts:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #ffc42c;
+}
+
+.container-fluid{
+    transition: top 2s;
+    display: block;
+    width: 100%;
+    top: 0;
+}
+.navbar-hidden {
+    top: -100px;
+}
+
+.divnav{
+    display: flex;
+
+}
+.ulnavbar{
+    display: flex;
+    list-style: none;
+    padding-top: 17px;
+}
+
+.ulnavbarlogo{
+    list-style: none;
+}
+
+.linavbarlogo{
+    color: black;
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'TT Firs Neue Trl', sans-serif;
+}
+
+.linavbar{
+    padding : 0 10px 0 10px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 17px;
+}
+
+.linavbar::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+.linavbar:hover::after {
+    transform: scaleX(1);
+}
+
+#navbar2{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.buttonnav{
+    padding-top: 2px;
+    text-align: center;
+    display: flex;
+}
+.buttonbank{
+    background-color: #FFC628;
+    border: #FFC628;
+    border-radius: 30px;
+    width: 150px;
+    box-sizing: border-box;
+    height: 55px;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+.buttonbank:hover{
+    cursor: pointer;
+    background-color: black;
+    border: #000;
+    color: white;
+}
+
+.buttonlistdiv{
+    text-align: center;
+    padding-left: 5px;
+}
+
+.buttonlist {
+    border-radius: 50%;
+    width: 55px; 
+    height: 55px; 
+    background-color: white;
+    border: 1px solid gray;
+    color: gray;
+  }
+  
+  .navbar-scrolled {
+    background-color: white;
+  }
+  .navbar-hidden {
+    display: none; 
+  }
+  

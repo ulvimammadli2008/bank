@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div id="cards_title_all">
+        <h1 class="cards_h1">Cards</h1>
+        <p class="cards_p">Everyone will enjoy the usability and advantages of Yelo Bank payment cards</p>
+    </div>
+
+
+    {% for card in each_card_h %}
+    <div class="yelo_light_div" id="yelo_light_id">
+        <div class="yelo_light_div_t">
+            <h3 class="yelo_light_h3">{{ card.title }}</h3>
+            <p style="font-weight: 100;" class="yelo_light_p">{{ card.subtitle }}</p>
+            <div class="yelo_light_all_in_one">
+                <div class="yelo_light_term">
+                    <div class="term_d">Term</div>
+                    <b class="b">{{ card.term }}
+                </div>
+                <div class="yelo_light_currency">
+                    <div class="term_d">Currency</div>
+                    <b class="b">{{ card.currency }}
+                </div>
+                <div class="yelo_light_cashback">
+                    <div class="term_d">Cashback</div>
+                    <b class="b">{{ card.cashback }}
+                </div>
+            </div>
+            <div class="button_order">
+                <a href="/card/{{card['id']}}"><button class="order">Order</button></a>
+                <a href="/card/{{card['id']}}" class="learn_more">Learn More    <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+        </div>
+        <div class="yelo_light_div_img">
+            <img src="{{ card.image }}" alt="" width="200px" style="border-radius: 15px;" class="img_img" id="rotate-scale-img">
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

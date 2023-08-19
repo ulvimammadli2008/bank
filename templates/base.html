@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/Yelo-Bank-Logo.jpg">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/order.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/story.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.cdnfonts.com/css/tt-commons" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/tt-firs-neue-trl" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar1">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px; padding-left: 175px;">
+              <a class="nav-link active" aria-current="page" href="#"><b><u style="text-decoration-color: #ffc42c;"> Individuals </u></b></a>
+              <a class="nav-link active" aria-current="page" href="#" id="navbartexts">Business</a>
+              <a class="nav-link active" aria-current="page" href="#" id="navbartexts">About bank</a>
+            </ul>
+        <div style="display: flex; padding-right: 175px;">
+                <a href="" style="text-decoration: none; color: grey; padding-top: 5px; padding-right: 25px;">Online queue</a>
+                <form action="">
+                    <i class="fa-sharp fa-solid fa-location-dot" style="color: grey;padding-top: 11px;"></i>
+                    <a href="" style="text-decoration: none; color: grey; padding-top: 5px;padding-right: 20px;">ATM's and branches</a>
+                </form>
+                <form class="d-flex" role="">
+                    <i class="fa-solid fa-phone" style="color: grey;padding-top: 13px;padding-right: 5px;"></i>
+                    <a href="" style="text-decoration: none; color: grey; padding-top: 7px; padding-right: 15px;">981</a>
+                  </form>
+                <form class="d-flex" role="search">
+                  <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: grey;padding-right: 15px;"></i></button>
+                </form>
+                <li class="nav-item dropdown" style="list-style: none; padding-top: 6px;color: grey;">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                      En
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#" style="list-style: none;">En</a></li>
+                      <li><a class="dropdown-item" href="#">Az</a></li>
+                      <li><a class="dropdown-item" href="#">Ru</a></li>
+                    </ul>
+                  </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="sticky-top">
+        <div class="navbar navbar-expand-lg bg-white" id="navbar2">
+          <div class="divnav">
+            <ul class="ulnavbarlogo">
+            <li ><a href="/main" class="linavbarlogo"><img src="{{ url_for('static', filename='img/logo.svg')}}" alt=""></a></li>
+            </ul>
+            <ul class="ulnavbar">
+              <li ><a href="" class="linavbar"><b>Loans</b></a></li>
+              <li ><a href="/cards" class="linavbar" id="linavbar_id"><b>Cards</b></a></li>
+              <li ><a href="" class="linavbar" id="linavbar_id"><b>Deposits</b></a></li>
+              <li ><a href="" class="linavbar" id="linavbar_id"><b>Cashback</b></a></li>
+            </ul>
+          </div>
+          <div class="buttonnav">
+            <a href="" target="_blank"><button class="buttonbank small-button"><b><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>  Internet Bank</b></button></a>
+            <div class="buttonlistdiv">
+              <button class="buttonlist" id="buttonlist_id" onclick="showList()"><i class="fa-sharp fa-solid fa-bars"></i></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="allinone">
+        <div class="loans_div">
+            <ul class="loans_ul">
+                <a href="" class="loans_title">Loans</a>
+                <a href="" class="loans_li"><li>Cash Loans</li></a>
+                <a href="" class="loans_li"><li>Online Loans</li></a>
+                <a href="" class="loans_li"><li>Loan secured by real estate</li></a>
+                <a href="" class="loans_li"><li>Loan secured by deposit</li></a>
+                <a href="" class="loans_li"><li>Mortgage</li></a>
+            </ul>
+        </div>
+        <div class="cards_div">
+            <ul class="loans_ul">
+                <a href="/cards" class="loans_title">Cards</a>
+                <a href="" class="loans_li"><li>Light</li></a>
+                <a href="" class="loans_li"><li>Premium</li></a>
+                <a href="" class="loans_li"><li>credit card</li></a>
+                <a href="" class="loans_li"><li>Card</li></a>
+            </ul>
+        </div>
+        <div class="deposits_div">
+            <ul class="loans_ul">
+                <a href="" class="loans_title">Deposits</a>
+                <a href="" class="loans_li"><li>Stable</li></a>
+                <a href="" class="loans_li"><li>Saving</li></a>
+            </ul>
+        </div>
+        <div class="img_div">
+            <img src="{{ url_for('static', filename= 'img/card.png')}}" alt="" width="345px", height="345px">
+        </div>
+      </div>
+      <div id="allinone_2">
+        <div class="card_ser_div">
+          <ul class="loans_ul">
+            <a href="" class="loans_title">Card services</a>
+            <a href="" class="loans_li"><li>Google Pay</li></a>
+            <a href="" class="loans_li"><li>PIN Set Online</li></a>
+            <a href="" class="loans_li"><li>Cashback</li></a>
+            <a href="" class="loans_li"><li>PIN Reset</li></a>
+            <a href="" class="loans_li"><li>PIN change</li></a>
+            <a href="" class="loans_li"><li>SMS notification</li></a>
+            <a href="" class="loans_li"><li>3D secure</li></a>
+            <a href="" class="loans_li"><li>Cash by code</li></a>
+            <a href="" class="loans_li"><li>ATM PIN SET</li></a>
+          </ul>
+          <ul class="loans_ul">
+            <a href="" class="loans_title">Forum</a>
+          </ul>
+        </div>
+        <div class="money_trans">
+          <ul class="loans_ul">
+            <a href="" class="loans_title">Money transfers</a>
+            <a href="" class="loans_li"><li>Zolotaya Korona</li></a>
+          </ul>
+          <ul class="other_ul">
+            <a href="" class="loans_title">Other services</a>
+            <a href="" class="loans_li"><li>Cash and settlement services</li></a>
+            <a href="" class="loans_li"><li>Safe deposit boxes</li></a>
+          </ul>
+          <ul class="loans_cal">
+            <a href="" class="loans_title">Loan Calculator</a>
+          </ul>
+        </div>
+        <div class="online_ser">
+          <ul class="loans_ul">
+            <a href="" class="loans_title">Online services</a>
+            <a href="" class="loans_li"><li>Request for a loan</li></a>
+            <a href="" class="loans_li"><li>Online payment</li></a>
+            <a href="" class="loans_li"><li>Loan payment</li></a>
+            <a href="" class="loans_li"><li>VAT refund</li></a>
+            <a href="" class="loans_li"><li>Online queue</li></a> 
+          </ul>
+          <ul class="loans_ul">
+            <a href="" class="loans_title">Cashback</a>
+          </ul>
+          <ul class="loans_ul_co">
+            <a href="" class="loans_title">Comments and suggestions</a>
+          </ul>
+        </div>
+      </div>
+
+<div id="restofall" class="">
+  {% block content %}
+  
+  {% endblock %}  
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    r
+</body>
+</html>
